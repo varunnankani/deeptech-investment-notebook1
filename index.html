@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive deep-tech investment notebook: Octobotics × PierSight" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Deep-Tech Investment Notebook — Octobotics × PierSight</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">DT</span>
+        <span class="brand-copy"><b>Investment Notebook</b><small>Octobotics × PierSight</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#thesis">Thesis</a>
+        <a href="#companies">Companies</a>
+        <a href="#competition">Competition</a>
+        <a href="#challenge">Challenge</a>
+        <a href="#founder-room">Founder Room</a>
+        <a href="#ask">Ask Research</a>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap section">
+      <div class="hero-grid">
+        <div class="hero-copy-wrap">
+          <div class="eyebrow">KALAARI FELLOWSHIP · INVESTMENT RESEARCH SYSTEM · SEP 2026</div>
+          <h1>When does <span class="grad">hardware stop being the product?</span></h1>
+          <p class="hero-copy">Two early-stage Indian deep-tech bets. One underlying question: can difficult physical systems become proprietary observation networks — and can those observations compound into recurring intelligence?</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#thesis">See the thesis</a>
+            <a class="btn ghost" href="#ask">Ask my research</a>
+          </div>
+          <div class="disclaimer">Not a company showcase. This is a working investment notebook: facts, assumptions, thesis, counter-evidence and kill criteria are separated deliberately.</div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-label">MY COMMON THESIS</div>
+          <div class="equation">
+            <span>Hard-to-access physical world</span><i>→</i><span>Proprietary observation</span><i>→</i><span>Longitudinal data</span><i>→</i><strong>Decision intelligence</strong>
+          </div>
+          <div class="hero-company-pair">
+            <div class="mini-company octo-card"><span>O</span><div><b>Octobotics</b><small>Inspection → asset intelligence</small></div></div>
+            <div class="mini-company pier-card"><span>P</span><div><b>PierSight</b><small>Observation → maritime intelligence</small></div></div>
+          </div>
+          <div class="hero-panel-foot">The investment fails if the physical bottleneck stays the unit of revenue.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="thesis" class="section band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">THESIS ARCHITECTURE</span><h2>Same pattern. Different physical layer.</h2></div>
+          <p>The hardware is the access point. The compounding asset is the history it creates — if customers eventually pay for what that history lets them decide.</p>
+        </div>
+        <div id="flowBoard" class="flow-board"></div>
+        <div class="inflection-label">Why this matters now in India</div>
+        <div id="inflectionGrid" class="inflection-grid"></div>
+      </div>
+    </section>
+
+    <section id="companies" class="section wrap">
+      <div class="section-head split-head">
+        <div><span class="kicker">THE TWO BETS</span><h2>Investment case, not company profile.</h2></div>
+        <div class="segmented" role="tablist" aria-label="Choose company">
+          <button class="seg active" data-company="octobotics">Octobotics</button>
+          <button class="seg" data-company="piersight">PierSight</button>
+        </div>
+      </div>
+      <div id="companyView"></div>
+    </section>
+
+    <section id="competition" class="section band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">COMPETITIVE BATTLEFIELD</span><h2>Who can kill the thesis?</h2></div>
+          <p>New entrants and incumbents are different threats. The question is not whether competition exists; it is whether the company has enough time and economic advantage to build something durable before others converge.</p>
+        </div>
+        <div class="competition-toolbar">
+          <button class="chip active" data-comp-company="octobotics">Octobotics</button>
+          <button class="chip" data-comp-company="piersight">PierSight</button>
+        </div>
+        <div id="competitionGrid" class="competition-grid"></div>
+      </div>
+    </section>
+
+    <section id="evidence" class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">EVIDENCE LEDGER</span><h2>Fact ≠ assumption ≠ thesis.</h2></div>
+        <p>Every claim is labelled. The purpose is to show where conviction comes from — and where primary diligence is still required.</p>
+      </div>
+      <div id="evidenceFilters" class="filters"></div>
+      <div id="evidenceList" class="evidence-list"></div>
+    </section>
+
+    <section id="challenge" class="section band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">CHALLENGE MY THESIS</span><h2>Start with the argument against me.</h2></div>
+          <p>Each challenge has three layers: the bear case, my current response, and the evidence that would make me change my mind.</p>
+        </div>
+        <div class="challenge-layout">
+          <div id="challengeRail" class="challenge-rail"></div>
+          <article id="challengeStage" class="challenge-stage"></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">HOW MY VIEW CHANGED</span><h2>Research should move conviction.</h2></div>
+        <p>The point of diligence is not to collect confirming evidence. It is to find the fact that forces a better thesis.</p>
+      </div>
+      <div id="timeline" class="timeline-wrap"></div>
+    </section>
+
+    <section id="venture" class="section band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">VENTURE-SCALE TEST</span><h2>Does revenue decouple from the physical bottleneck?</h2></div>
+          <p>These are not forecasts. They make the scaling logic explicit — and show what would need to improve for each business to earn software-like upside.</p>
+        </div>
+        <div class="calc-grid">
+          <article class="calc-card octo-accent">
+            <div class="calc-title"><span>OCTOBOTICS</span><b>Operating leverage</b></div>
+            <label>Inspections / robot / month <input id="octoInspections" type="range" min="2" max="12" value="4"/><output id="octoInspectionsOut">4</output></label>
+            <label>Revenue / inspection (₹ lakh) <input id="octoTicket" type="range" min="2" max="25" value="8"/><output id="octoTicketOut">8</output></label>
+            <label>Field engineers / robot <input id="octoEngineers" type="range" min="1" max="8" value="4"/><output id="octoEngineersOut">4</output></label>
+            <div class="metric-big"><span>Monthly revenue / field engineer</span><strong id="octoMetric">₹8.0L</strong></div>
+            <p id="octoInterpretation" class="interpretation"></p>
+          </article>
+
+          <article class="calc-card pier-accent">
+            <div class="calc-title"><span>PIERSIGHT</span><b>Observation monetisation</b></div>
+            <label>Satellites <input id="pierSats" type="range" min="1" max="32" value="8"/><output id="pierSatsOut">8</output></label>
+            <label>Recurring analytics customers <input id="pierCustomers" type="range" min="2" max="120" value="24"/><output id="pierCustomersOut">24</output></label>
+            <label>Avg. analytics ACV ($k) <input id="pierAcv" type="range" min="20" max="500" step="10" value="120"/><output id="pierAcvOut">120</output></label>
+            <div class="metric-big"><span>Recurring analytics revenue / satellite</span><strong id="pierMetric">$360k</strong></div>
+            <p id="pierInterpretation" class="interpretation"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="founder-room" class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">FOUNDER ROOM</span><h2>If I had 30 minutes with the founders.</h2></div>
+        <p>Questions are ranked by information gain: each should be capable of changing the investment decision.</p>
+      </div>
+      <div id="founderGrid" class="founder-grid"></div>
+    </section>
+
+    <section id="ask" class="section band ask-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">ASK MY RESEARCH</span><h2>Query the notebook.</h2></div>
+          <p>This version is intentionally retrieval-only: it answers from the curated corpus and shows whether the result is a fact, thesis or risk. It refuses when the research does not support an answer.</p>
+        </div>
+        <div class="chat-shell">
+          <div id="suggestions" class="suggestions"></div>
+          <div id="chatLog" class="chat-log">
+            <div class="msg assistant"><div class="avatar">R</div><div class="bubble"><span class="answer-label">RESEARCH MODE</span><p>Ask why I still like Octobotics despite PetroBot, how PierSight becomes non-linear, what I would ask either founder, or what would make me walk away.</p></div></div>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" autocomplete="off" placeholder="Ask a question about the investment research…" />
+            <button class="btn primary" type="submit">Ask</button>
+          </form>
+          <div class="chat-note">No external LLM is called in this prototype. Production RAG should remain source-bounded and server-side.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources" class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">SOURCE REGISTER</span><h2>Primary sources first.</h2></div>
+        <p>Company claims are treated as company claims. Competitive and investment conclusions sit separately from the evidence underneath them.</p>
+      </div>
+      <div id="sourceGrid" class="source-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <div><b>Deep-Tech Investment Notebook</b><br/><span>Research snapshot · September 2026</span></div>
+    <div class="footer-note">Built to show how the thesis changed — not just the final answer.</div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
