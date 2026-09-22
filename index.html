@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive investment notebook on Octobotics and PierSight — Indian deep-tech, robotics and space intelligence." />
+  <meta name="color-scheme" content="dark light" />
+  <title>Deep-Tech Investment Notebook — Octobotics × PierSight</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">DT</span>
+        <span class="brand-copy"><b>Investment Notebook</b><small>Octobotics × PierSight</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#thesis">Thesis</a>
+        <a href="#companies">Companies</a>
+        <a href="#competition">Competition</a>
+        <a href="#challenge">Challenge</a>
+        <a href="#founder-room">Founder Room</a>
+        <a href="#ask">Ask Research</a>
+        <a href="evidence.html" class="nav-muted">Evidence ↗</a>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap section">
+      <div class="hero-grid">
+        <div class="hero-copy-wrap">
+          <div class="eyebrow">DEEP TECHNOLOGY · ROBOTICS × SPACE · SEP 2026</div>
+          <h1>Physical systems are becoming <span class="grad">intelligence platforms.</span></h1>
+          <p class="hero-copy">My thesis is not “more robots” or “more satellites”. It is that difficult physical systems can become proprietary observation layers—and that the best companies will compound those observations into recurring intelligence.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#thesis">Read the thesis</a>
+            <a class="btn ghost" href="#companies">See the two bets</a>
+          </div>
+          <div class="hero-proof">
+            <span>RDI Deep Technology</span>
+            <span>Robotics</span>
+            <span>Space</span>
+            <span>Research-backed</span>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-label">COMMON INVESTMENT LENS</div>
+          <div class="equation vertical">
+            <span>Hard-to-observe physical world</span>
+            <i>↓</i>
+            <span>Indigenous hardware / sensing layer</span>
+            <i>↓</i>
+            <span>Longitudinal proprietary data</span>
+            <i>↓</i>
+            <strong>Recurring decision intelligence</strong>
+          </div>
+          <div class="hero-company-pair">
+            <div class="mini-company octo-card"><span>O</span><div><b>Octobotics</b><small>Inspection → asset intelligence</small></div></div>
+            <div class="mini-company pier-card"><span>P</span><div><b>PierSight</b><small>Observation → maritime intelligence</small></div></div>
+          </div>
+          <div class="hero-panel-foot">The investment fails if the physical bottleneck remains the unit of revenue.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="thesis" class="section band">
+      <div class="wrap">
+        <div class="section-head thesis-head">
+          <div><span class="kicker">THE THESIS</span><h2 id="thesisHeadline"></h2></div>
+          <p>Four shifts make this investable now—not as a policy story, but as a commercial one.</p>
+        </div>
+        <div id="inflectionGrid" class="inflection-grid thesis-grid"></div>
+        <div class="thesis-conclusion">
+          <span>MY THESIS</span>
+          <p id="thesisClosing"></p>
+        </div>
+        <div class="thesis-bridge">
+          <div class="bridge-title">Two companies through the same lens</div>
+          <div id="flowBoard" class="flow-board"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="companies" class="section wrap">
+      <div class="section-head split-head">
+        <div><span class="kicker">THE TWO BETS</span><h2>What exists, what is missing, and what must become true.</h2></div>
+        <div class="segmented" role="tablist" aria-label="Choose company">
+          <button class="seg active" data-company="octobotics">Octobotics</button>
+          <button class="seg" data-company="piersight">PierSight</button>
+        </div>
+      </div>
+      <div id="companyView"></div>
+    </section>
+
+    <section id="competition" class="section band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">COMPETITIVE BATTLEFIELD</span><h2>Competition validates the market. It also sets the clock.</h2></div>
+          <p>I separate new entrants from incumbents because the threat is different: new entrants lack accumulated learning; incumbents may have more capability but the wrong economics or product architecture.</p>
+        </div>
+        <div class="competition-toolbar">
+          <button class="chip active" data-comp-company="octobotics">Octobotics</button>
+          <button class="chip" data-comp-company="piersight">PierSight</button>
+        </div>
+        <div id="competitionGrid" class="competition-grid"></div>
+      </div>
+    </section>
+
+    <section id="challenge" class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">CHALLENGE MY THESIS</span><h2>Start with the uncomfortable question.</h2></div>
+        <p>Each argument has a bear case, my current response and a falsifier. If the falsifier turns out to be true, I should change my mind.</p>
+      </div>
+      <div class="challenge-layout">
+        <div id="challengeRail" class="challenge-rail"></div>
+        <article id="challengeStage" class="challenge-stage"></article>
+      </div>
+    </section>
+
+    <section id="venture" class="section band">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">VENTURE-SCALE TEST</span><h2>Does revenue decouple from the physical bottleneck?</h2></div>
+          <p>The calculators are not forecasts. They make the core scaling question explicit: can technology create more economic output without requiring the same proportion of physical capacity?</p>
+        </div>
+        <div class="calc-grid">
+          <article class="calc-card octo-accent">
+            <div class="calc-title"><span>OCTOBOTICS</span><b>Operating leverage</b></div>
+            <label>Inspections / robot / month <input id="octoInspections" type="range" min="2" max="12" value="4"/><output id="octoInspectionsOut">4</output></label>
+            <label>Revenue / inspection (₹ lakh) <input id="octoTicket" type="range" min="2" max="25" value="8"/><output id="octoTicketOut">8</output></label>
+            <label>Field engineers / robot <input id="octoEngineers" type="range" min="1" max="8" value="4"/><output id="octoEngineersOut">4</output></label>
+            <div class="metric-big"><span>Monthly revenue / field engineer</span><strong id="octoMetric">₹8.0L</strong></div>
+            <p id="octoInterpretation" class="interpretation"></p>
+          </article>
+
+          <article class="calc-card pier-accent">
+            <div class="calc-title"><span>PIERSIGHT</span><b>Observation monetisation</b></div>
+            <label>Satellites <input id="pierSats" type="range" min="1" max="32" value="8"/><output id="pierSatsOut">8</output></label>
+            <label>Recurring analytics customers <input id="pierCustomers" type="range" min="2" max="120" value="24"/><output id="pierCustomersOut">24</output></label>
+            <label>Avg. analytics ACV ($k) <input id="pierAcv" type="range" min="20" max="500" step="10" value="120"/><output id="pierAcvOut">120</output></label>
+            <div class="metric-big"><span>Recurring analytics revenue / satellite</span><strong id="pierMetric">$360k</strong></div>
+            <p id="pierInterpretation" class="interpretation"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="founder-room" class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">FOUNDER ROOM</span><h2>If I had 30 minutes with the founders.</h2></div>
+        <p>These are not “tell me about your market” questions. Each is designed to change the investment decision if the answer is weak.</p>
+      </div>
+      <div id="founderGrid" class="founder-grid"></div>
+    </section>
+
+    <section id="ask" class="section band ask-section">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">ASK MY RESEARCH</span><h2>Interrogate the notebook.</h2></div>
+          <p>On a Vercel deployment this uses a server-side LLM grounded only in the curated research corpus. On GitHub Pages it falls back to local retrieval so no API key is ever exposed in the browser.</p>
+        </div>
+        <div class="chat-shell">
+          <div id="suggestions" class="suggestions"></div>
+          <div id="chatLog" class="chat-log">
+            <div class="msg assistant">
+              <div class="avatar">R</div>
+              <div class="bubble">
+                <span class="answer-label">RESEARCH ASSISTANT</span>
+                <p>Try the hard questions: “Why isn't PetroBot the better investment?”, “Why should PierSight own satellites?”, or “What would make you walk away?”</p>
+              </div>
+            </div>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" autocomplete="off" placeholder="Ask a question about the investment research…" />
+            <button class="btn primary" type="submit">Ask</button>
+          </form>
+          <div class="chat-note"><span class="status-dot"></span><span id="assistantMode">Detecting assistant mode…</span> · Answers are bounded by the research corpus.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap closing-section">
+      <div class="closing-card">
+        <span class="kicker">THE COMMON BET</span>
+        <h2>Own the difficult observation layer. Then compound the data.</h2>
+        <p>Octobotics has to prove robotics creates operating leverage in industrial inspection. PierSight has to prove persistent observation can become a multi-tenant intelligence product. Different hardware. Same investment question.</p>
+        <div class="closing-actions">
+          <a class="btn primary" href="evidence.html">Open evidence & sources</a>
+          <a class="btn ghost" href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><b>Deep-Tech Investment Notebook</b><span>Research snapshot · September 2026</span></div>
+      <div class="footer-links"><a href="evidence.html">Evidence & sources</a><a href="research/methodology.md">Methodology</a><a href="research/sources.md">Research files</a></div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
