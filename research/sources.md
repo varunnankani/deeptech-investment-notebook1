@@ -1,6 +1,6 @@
 # Source register
 
-The live source register is rendered on `evidence.html` from `data.js`.
+Source notes used during research and diligence.
 
 ## Macro / policy
 
