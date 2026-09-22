@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Investment notebook on Octobotics and PierSight, focused on Indian deep-tech, robotics, space and recurring intelligence.">
+  <title>Deep-Tech Investment Notebook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="notebook-brand" href="index.html"><span class="brand-grid">DT</span><span>Investment Notebook</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#thesis">Thesis</a>
+        <a href="#deep-dives">Deep dives</a>
+        <a href="#interrogate">Interrogate</a>
+        <a href="evidence.html">Evidence</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="home-hero-grid"></div>
+      <div class="shell home-hero-inner">
+        <div class="hero-kicker">DEEP TECHNOLOGY / ROBOTICS + SPACE / 2026</div>
+        <h1>Own the observation layer.<br><span>Compound the intelligence.</span></h1>
+        <p class="hero-lede">India's next deep-tech inflection is not simply more robots or more satellites. It is the conversion of physical systems into data and intelligence platforms.</p>
+        <div class="hero-cta-row">
+          <a class="button button-light" href="#interrogate">Interrogate the thesis</a>
+          <a class="text-link" href="#deep-dives">Explore the companies <span>↘</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="thesis" class="home-thesis section-pad">
+      <div class="shell">
+        <div class="section-intro two-col-intro">
+          <div><span class="section-index">01</span><h2>The investment lens</h2></div>
+          <p>Two companies, two physical systems, one common question: can hard-to-replicate observation infrastructure become a recurring decision layer?</p>
+        </div>
+        <div class="thesis-rail">
+          <article><span>01</span><h3>Physical AI crosses the deployment threshold</h3><p>Sensors, edge compute, perception and autonomy are becoming reliable enough for robots to move into hazardous, variable environments.</p></article>
+          <article><span>02</span><h3>Space moves from infrastructure to utility</h3><p>Smaller satellites, cheaper launches and private constellations make high-frequency Earth observation increasingly commercial.</p></article>
+          <article><span>03</span><h3>Hardware becomes the data-acquisition wedge</h3><p>The physical system matters because it captures difficult longitudinal data that can support higher-value intelligence products.</p></article>
+          <article><span>04</span><h3>India gains a policy and capital bridge</h3><p>The RDI framework explicitly places robotics and space inside the country's deep-tech priority set.</p></article>
+        </div>
+        <div class="thesis-statement">
+          <span>MY THESIS</span>
+          <p>India's next decade of deep tech will be won by companies that use indigenous hardware to capture difficult physical-world data, then compound it into recurring intelligence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="deep-dives" class="company-gateway section-pad">
+      <div class="shell">
+        <div class="section-intro two-col-intro">
+          <div><span class="section-index">02</span><h2>Choose a deep dive</h2></div>
+          <p>The application forced the investment cases into 2,000 characters. These pages show the actual underwriting logic, including white space, competition, scaling tests and reasons to walk away.</p>
+        </div>
+        <div class="gateway-grid">
+          <a class="gateway-card octo-gateway" href="octobotics.html">
+            <div class="gateway-top"><span class="gateway-no">01</span><span class="gateway-chip">ROBOTICS / NDT</span></div>
+            <div>
+              <p class="gateway-overline">Asset Health Intelligence</p>
+              <h3>Octobotics</h3>
+              <p>Robotic inspection is the collection layer. The investment question is whether field operations can turn into operating leverage and, eventually, asset intelligence.</p>
+            </div>
+            <div class="gateway-bottom"><span>Open investment case</span><b>↗</b></div>
+          </a>
+          <a class="gateway-card pier-gateway" href="piersight.html">
+            <div class="gateway-orbit orbit-one"></div><div class="gateway-orbit orbit-two"></div>
+            <div class="gateway-top"><span class="gateway-no">02</span><span class="gateway-chip">SPACE / SAR</span></div>
+            <div>
+              <p class="gateway-overline">Persistent Maritime Intelligence</p>
+              <h3>PierSight</h3>
+              <p>SAR and AIS are the observation layer. The investment question is whether MATSYA can turn satellite capacity into a recurring maritime intelligence network.</p>
+            </div>
+            <div class="gateway-bottom"><span>Open investment case</span><b>↗</b></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="interrogate" class="guided-section section-pad">
+      <div class="shell guided-grid">
+        <div class="guided-copy">
+          <span class="section-index">03</span>
+          <p class="mono-label">GUIDED RESEARCH ASSISTANT</p>
+          <h2>Interrogate the thesis.</h2>
+          <p>This is intentionally not an open-ended chatbot. Start typing and select one of 25 reviewed investment questions. Every answer is fixed, source-conscious and designed to expose the logic behind the investment case.</p>
+          <div class="guided-rule"><span>25</span><p>approved questions across thesis, moat, competition, scaling, customer economics and kill criteria.</p></div>
+        </div>
+
+        <div class="qa-console">
+          <div class="qa-console-head"><span>QUESTION FINDER</span><span class="live-badge"><i></i> REVIEWED RESPONSES</span></div>
+          <div class="qa-search-wrap">
+            <label for="questionSearch">Start typing a question or topic</label>
+            <div class="qa-input-shell">
+              <input id="questionSearch" type="text" autocomplete="off" placeholder="Try: moat, MATSYA, competitors, non-linear..." aria-autocomplete="list" aria-controls="questionDropdown">
+              <button id="clearQuestion" class="qa-clear" type="button" aria-label="Clear question">×</button>
+            </div>
+            <div id="questionDropdown" class="qa-dropdown" role="listbox" hidden></div>
+            <p id="questionHint" class="qa-hint">You must select a question from the dropdown. Free-form questions cannot be submitted.</p>
+          </div>
+
+          <div id="answerPanel" class="answer-panel empty-answer">
+            <div class="answer-placeholder">
+              <span>SELECT A QUESTION</span>
+              <p>Your reviewed answer will appear here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-strip">
+      <div class="shell closing-strip-inner">
+        <p>Research note: this notebook separates what I know from what I still need to diligence.</p>
+        <a href="evidence.html">Open evidence ledger ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner"><span>Deep-Tech Investment Notebook</span><span>Octobotics + PierSight / 2026</span></div>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
