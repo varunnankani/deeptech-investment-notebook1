@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Evidence ledger and source register for the Deep-Tech Investment Notebook." />
+  <meta name="color-scheme" content="dark light" />
+  <title>Evidence & Sources — Deep-Tech Investment Notebook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="evidence-page">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="nav-shell">
+    <nav class="nav wrap">
+      <a class="brand" href="index.html" aria-label="Back to notebook">
+        <span class="brand-mark">DT</span>
+        <span class="brand-copy"><b>Evidence & Sources</b><small>Research audit trail</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#thesis">Thesis</a>
+        <a href="index.html#companies">Companies</a>
+        <a href="index.html#challenge">Challenge</a>
+        <a href="index.html#ask">Ask Research</a>
+        <a href="index.html">← Main notebook</a>
+      </div>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section wrap evidence-hero">
+      <span class="kicker">REFERENCE LAYER</span>
+      <h1>Evidence is separate from conviction.</h1>
+      <p>This page is deliberately outside the main narrative. It records what is sourced, what I am assuming, what is thesis, and what would invalidate the investment case.</p>
+      <div class="method-strip">
+        <span><b>FACT</b> source-backed statement</span>
+        <span><b>ASSUMPTION</b> requires diligence</span>
+        <span><b>THESIS</b> my investment interpretation</span>
+        <span><b>RISK</b> condition that can break the case</span>
+      </div>
+    </section>
+
+    <section class="section band evidence-workbench">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">EVIDENCE LEDGER</span><h2>Fact ≠ assumption ≠ thesis.</h2></div>
+          <p>Use the filters to audit any claim before relying on it.</p>
+        </div>
+        <div class="evidence-controls">
+          <div id="evidenceFilters" class="filters"></div>
+          <input id="evidenceSearch" class="evidence-search" type="search" placeholder="Search claims, companies or risks…" />
+        </div>
+        <div id="evidenceList" class="evidence-list"></div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head">
+        <div><span class="kicker">SOURCE REGISTER</span><h2>Primary sources first.</h2></div>
+        <p>Company claims are labelled as company claims. Competitor pages are used to validate category evidence, not to independently verify themselves.</p>
+      </div>
+      <div id="sourceGrid" class="source-grid"></div>
+    </section>
+
+    <section class="section band">
+      <div class="wrap methodology-card">
+        <span class="kicker">METHOD</span>
+        <h2>Fact → Assumption → Thesis → Falsifier</h2>
+        <p>I try to write the kill criterion before the upside. Data moats are treated as earned rather than assumed: rights to reuse data, measurable product improvement, customer willingness to pay and workflow lock-in all need to show up in diligence.</p>
+        <a class="btn ghost" href="research/methodology.md">Open full methodology</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><b>Deep-Tech Investment Notebook</b><span>Evidence snapshot · September 2026</span></div>
+      <div class="footer-links"><a href="index.html">Main notebook</a><a href="research/methodology.md">Methodology</a><a href="research/sources.md">Research files</a></div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="evidence.js"></script>
+</body>
+</html>

@@ -1,42 +1,43 @@
 # Deep-Tech Investment Notebook — Octobotics × PierSight
 
-An interactive investment-research microsite built for a venture-fellowship application around two early-stage Indian deep-tech companies.
+An interactive investment-research microsite built around two early-stage Indian deep-tech companies.
 
 ## Core thesis
 
-> **When does hardware stop being the product?**
+> **India's next deep-tech inflection is not simply “more robots” or “more satellites”; it is the conversion of physical systems into data/intelligence platforms.**
 
-Both companies use difficult physical systems to observe parts of the real world that are expensive, risky or unreliable to observe today.
+The two companies express the thesis differently:
 
 - **Octobotics:** hazardous asset → robotic NDT → repeated condition history → asset intelligence
 - **PierSight:** ocean / vessel → SAR + AIS → repeated behaviour history → maritime intelligence
 
-The investment only becomes venture-scale if the information layer begins to compound faster than the physical bottleneck.
+The investment becomes venture-scale only when revenue begins to decouple from the physical bottleneck.
 
-## What this version demonstrates
+## V3 information architecture
 
-- Thesis architecture connecting both companies without forcing them into the same market
-- Six-part company investment map: current state → white space → why now → competition → advantage → end-state
-- Competitive battlefield with explicit incumbent / new-entrant threats
-- Evidence ledger separating **fact / assumption / thesis / risk**
-- **Challenge My Thesis**: bear case → response → falsifier
-- **How My View Changed** research timeline
-- Venture-scale calculators for the core operating-leverage metrics
-- Founder-room questions ranked by information gain
-- Source-bounded **Ask My Research** retrieval experience
-- Primary-source register
+The public notebook is intentionally narrative-first:
+
+1. Thesis and four India-specific technology inflections
+2. Two company investment cases using the same six-part structure
+3. Competitive battlefield
+4. Challenge My Thesis — bear case → response → falsifier
+5. Venture-scale calculators
+6. Founder Room
+7. Source-grounded research assistant
+
+The **Evidence Ledger has been moved to `evidence.html`** so facts / assumptions / thesis / risk remain auditable without interrupting the main experience.
+
+The previous “How My View Changed” section has been removed from the public narrative.
 
 ## Research discipline
 
-The notebook follows a simple rule:
-
 **Fact → Assumption → Thesis → Falsifier**
 
-Company claims are treated as company claims unless independently verified. Forward-looking capabilities are labelled as target states. A risk is only useful if there is a condition that would make the investor change their mind.
+Company claims remain labelled as company claims. Forward-looking capabilities are not treated as deployed facts. A risk is useful only when there is a condition that would make the investment view change.
 
 ## Run locally
 
-No build tools or dependencies are required.
+The static site needs no build step:
 
 ```bash
 python3 -m http.server 8000
@@ -44,36 +45,53 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000`.
 
-## Deploy to GitHub Pages
+On a local static server or GitHub Pages, **Ask My Research uses a local retrieval fallback**. No API key is needed.
 
-1. Create a public GitHub repository.
-2. Upload the repository contents to the root of `main`.
-3. Open **Settings → Pages**.
-4. Choose **Deploy from a branch** → `main` → `/ (root)`.
-5. GitHub will publish to `https://<username>.github.io/<repo>/`.
+## GitHub Pages
 
-A custom domain or Vercel deployment can be added later; the site is static and portable.
+GitHub Pages works for testing the static experience:
 
-## Research assistant: current vs production
+1. Push the contents to `main`.
+2. Go to **Settings → Pages**.
+3. Select **Deploy from a branch → main → / (root)**.
 
-The included assistant is deliberately retrieval-only. It searches the curated corpus in `data.js`, labels the retrieved item as fact / thesis / risk, and links the relevant public source where available.
+The server-side LLM endpoint will not run on GitHub Pages, so the assistant automatically falls back to local retrieval.
 
-For a production RAG version:
+## Vercel + grounded LLM assistant
 
-1. Move LLM generation to a server-side / serverless endpoint.
-2. Retrieve only from the approved research corpus.
-3. Pass source IDs and evidence type with every retrieved passage.
-4. Force factual sentences to cite a source.
-5. Visibly distinguish sourced fact, investor inference and unresolved diligence question.
-6. Refuse when the corpus is insufficient.
-7. Never expose model API keys in client-side JavaScript.
+The repo contains two serverless functions:
 
-## Files
+- `api/health.js` — tells the frontend whether the LLM backend is configured.
+- `api/ask.js` — retrieves relevant passages from `research/knowledge.json`, sends only those passages to the model, and returns source-cited answers.
 
-- `index.html` — application shell
-- `styles.css` — responsive visual system
-- `app.js` — interactions, calculators and retrieval logic
-- `data.js` — structured research / evidence corpus
-- `research/` — human-readable working notes and methodology
+To enable it on Vercel:
+
+1. Import this GitHub repository into Vercel.
+2. Add an environment variable named `OPENAI_API_KEY`.
+3. Optionally add `OPENAI_MODEL`; default is `gpt-5.6-luna`.
+4. Deploy.
+
+The API key is read only server-side. **Never put it in `app.js`, `index.html`, `data.js`, or any GitHub-visible file.**
+
+The research assistant is deliberately bounded:
+
+- answers only from the curated corpus;
+- distinguishes fact from investment inference;
+- cites the supplied source register;
+- states when evidence is insufficient;
+- does not browse the web during an answer.
+
+## Key files
+
+- `index.html` — main public investment notebook
+- `evidence.html` — separate research audit trail
+- `styles.css` — visual system
+- `app.js` — main interactions, calculators, assistant frontend
+- `evidence.js` — evidence-page filters and source register
+- `data.js` — structured notebook content
+- `api/ask.js` — server-side grounded LLM endpoint for Vercel
+- `api/health.js` — assistant-mode detection
+- `research/knowledge.json` — source-bounded retrieval corpus
+- `research/` — human-readable notes and methodology
 
 Research snapshot: **September 2026**.
