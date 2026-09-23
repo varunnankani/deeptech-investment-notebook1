@@ -198,7 +198,7 @@ button,input{font:inherit}
 
 /* V10 homepage compare layer */
 .home-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
-.home-company-card{border:1px solid #d8d6d0;background:#fff;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.home-company-card{border:1px solid #d8d6d0;background:#fff;overflow:visible;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
 .home-company-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(8,16,19,.10)}
 .home-company-card.octo-card{background:linear-gradient(180deg,#ffffff 0%,#f3fbf8 100%);border-color:#c7ddd7}
 .home-company-card.pier-card{background:linear-gradient(180deg,#0d1820 0%,#101f28 100%);border-color:#324650;color:#fff}
@@ -319,7 +319,7 @@ body{font-size:15.5px;letter-spacing:-.004em}
 
 /* Two-company comparison, same rubric and distinct identities */
 .home-compare-grid{gap:18px;margin-top:28px;align-items:stretch}
-.home-company-card{position:relative;min-height:420px;box-shadow:0 14px 34px rgba(17,17,25,.055)}
+.home-company-card{position:relative;box-shadow:0 14px 34px rgba(17,17,25,.055);display:flex;flex-direction:column;min-width:0}
 .home-company-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;transition:width .22s ease}
 .home-company-card.octo-card:before{background:var(--octo)}
 .home-company-card.pier-card:before{background:var(--pier-cyan)}
@@ -327,15 +327,15 @@ body{font-size:15.5px;letter-spacing:-.004em}
 .home-company-card:hover{transform:translateY(-7px)}
 .home-company-card.octo-card:hover{box-shadow:0 24px 58px rgba(8,108,92,.13);border-color:#a9d5ca}
 .home-company-card.pier-card:hover{box-shadow:0 24px 58px rgba(7,20,31,.24);border-color:#527187}
-.home-company-head{padding:27px 28px 4px 31px;min-height:160px}
+.home-company-head{padding:27px 28px 22px 31px}
 .home-company-head h3{font-size:29px;line-height:1.04;margin:14px 0 10px;max-width:460px}
 .home-company-head p{font-size:13px;max-width:520px}
 .octo-card .home-company-head p{color:#59666a}
-.rubric-grid{grid-template-columns:repeat(3,minmax(0,1fr));height:calc(100% - 164px)}
-.rubric-grid>div{padding:22px 23px 24px;display:flex;flex-direction:column;min-height:190px}
+.rubric-grid{grid-template-columns:repeat(3,minmax(0,1fr));height:auto;align-items:stretch}
+.rubric-grid>div{padding:22px 23px 24px;display:flex;flex-direction:column;min-height:0;overflow-wrap:anywhere;word-break:normal}
 .rubric-grid span{font-size:9px;letter-spacing:.14em}
 .rubric-grid b{font-size:21px;line-height:1.16;margin:11px 0 8px}
-.rubric-grid small{margin-top:auto;font-size:12px;line-height:1.5}
+.rubric-grid small{margin-top:10px;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
 .octo-card .tag.octo{background:#dff4ee;color:#08705f;border-color:#68bca9}
 .pier-card .tag.pier{background:#12293a;color:#8be1ff;border-color:#345c72}
 
